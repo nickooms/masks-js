@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+before_deploy:
+- npm run build
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: oomsni@gmail.com
+  api_key:
+    secure: SMRMHPE5zr7jdpKAzA4QYjV5mqjQmMOE5UNWCruLlZnhkKIoLwdQtzaVCGbYN4MpyLh8jqbX4tuZjlpop2Jet+XQJpehPM3EmrgKbXZcQS51FZ6YdGnEbX3FyCBhV6lGo/jCzRbdenVa33OCnUIFX271zohwIR5bqMU4v2jw435W6L9b5jpvJE/AT4n0K/7sPtYvVueyaUpLuxFOexGUkSZqHkhgmO+5zmxHt+XArQasykgRMoIHac9kaTc6/xZoXg0phz+IoE5LV9s4zhoC1FUMpugcJ14SPs7vRzJgziTJp3wScDEbHH0VY8Ynw9ciIZ1Ur1qIRB5JlSSEi66GmbPP8TjKaNhBPpYVarb0RpEahKl296Kzdvfv3MnZYMhHXnHXMYLSJ3mmw26hnVbcYHB3yI9AWpIcnliVp4oNgUqUCU93woDoS3wbSzzOF31R5VWfipOkMaVlrCxpisBhLGj73Yu54aXdMj8g3ni3mDXj7Cm0tXfa5EsZFJ/GjmE6MRXiD8ET/pNAafXlAZMDcgBerV0SNfo+wLlS2OGhV3V1zFKWEF26fDQiOz7x7wKvEft38nDX9vgpa0UYvsoDFoxIFFx/Y4EBxwnobFvyFl8mQ4P18szypp0YH72RiUJe9Tse9n2/4ju3zpEp75lt93N24WA6qYcPE4TtfpxGfYA=
+  on:
+    tags: true
+    repo: nickooms/masks-js
